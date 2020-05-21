@@ -1,12 +1,13 @@
 "use strict";
 
+
 class TradingCard extends React.Component {
   render() {
     return (
       <div className="card">
         <h2>Name: {this.props.name}</h2>
         <img src={this.props.imgUrl} />
-        <h2>Skill: </h2>
+        <h2>Skill:{this.props.skill}</h2>
       </div>
     );
   }
@@ -44,3 +45,26 @@ ReactDOM.render(
   ),
   document.querySelector('#llambda')
 );
+
+ReactDOM.render(
+  (
+    <TradingCard
+      name="Merge"
+      skill="farting rainbows"
+      imgUrl="/static/img/merge.jpg"
+    />
+  ),
+  document.querySelector('#merge')
+);
+
+ReactDOM.render(
+  (
+    <TradingCard
+      name="Seedpy"
+      skill="Counting watermelons"
+      imgUrl="static/img/seedpy.jpg"
+    />
+  ),
+  document.querySelector('#seedpy')
+)
+
